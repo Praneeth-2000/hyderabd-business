@@ -16,7 +16,7 @@
     background-size: cover;
     min-height: 100vh;
     position: relative;
-    padding-bottom: 100px;
+    padding-bottom: 0;
 }
 
 .ref-header {
@@ -90,10 +90,8 @@
 .main-title {
     font-family: 'Caveat', cursive;
     font-size: 36px;
-    line-height: 35px;
+    line-height: normal;
     font-weight: 400;
-    width: 346px;
-    height: 70px;
     margin: 0 auto 1.5rem auto;
     text-align: center;
     overflow: visible;
@@ -102,9 +100,8 @@
 .script-text {
     font-family: 'Caveat', cursive;
     color: var(--orange-accent);
-    display: block;
+    display: inline-block;
     font-size: 36px;
-    margin-top: 0.5rem;
     position: relative;
     font-weight: 400;
 }
@@ -352,7 +349,6 @@
 
     .script-text {
         font-size: 28px;
-        margin-top: 0.25rem;
     }
 
     .script-text::after {

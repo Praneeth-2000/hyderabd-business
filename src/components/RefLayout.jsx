@@ -75,7 +75,7 @@ const RefLayout = () => {
             <section className="hero-section">
                 <h1 className="main-title">
                     website design in hyderabad
-                    that<span className="script-text">grows your business</span>
+                    that <span className="script-text">grows your business</span>
                 </h1>
 
                 <p className="description">
