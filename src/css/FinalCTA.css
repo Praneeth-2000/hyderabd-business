@@ -1,0 +1,114 @@
+.final-cta-container {
+    width: 100%;
+}
+
+/* CTA Section */
+.cta-section {
+    background-color: #fafff5;
+    padding: 5rem 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cta-title {
+    font-family: 'Caveat', cursive;
+    font-size: 48px;
+    color: #2d2d2d;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    max-width: 600px;
+    line-height: 1.1;
+}
+
+.cta-description {
+    max-width: 500px;
+    margin-bottom: 3rem;
+}
+
+.cta-description p {
+    font-family: 'Mulish', sans-serif;
+    font-size: 20px;
+    color: #2d2d2d;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.cta-button {
+    background: linear-gradient(135deg, #50b90a 0%, #469618 100%);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-family: 'Eras Medium ITC', 'Mulish', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    white-space: nowrap;
+    text-transform: lowercase;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(55, 96, 38, 0.3);
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(92, 179, 56, 0.4);
+}
+
+/* Footer Section */
+.footer-credits {
+    background-color: #f5f5f5;
+    padding: 3rem 1.5rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-credits-img {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.social-icon {
+    color: #000000;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icon:hover {
+    color: #5cb338;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .cta-title {
+        font-size: 36px;
+    }
+
+    .cta-description p {
+        font-size: 18px;
+    }
+
+    .cta-button {
+        font-size: 18px;
+        padding: 0.8rem 2rem;
+    }
+}
+
+@media (max-width: 374px) {
+    .cta-title {
+        font-size: 32px;
+    }
+}

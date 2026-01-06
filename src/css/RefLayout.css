@@ -1,0 +1,664 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@700&family=Yellowtail&family=Caveat:wght@400;700&display=swap');
+
+:root {
+    --green-primary: #5cb338;
+    --green-light: #f0f9eb;
+    --orange-accent: #f36d21;
+    --text-dark: #2d2d2d;
+    --text-muted: #555555;
+    --white: #ffffff;
+}
+
+.ref-layout {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-dark);
+    background: url('../assets/layout-bg.jpg') no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 100px;
+}
+
+.ref-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.logo-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.header-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.corner-curl {
+    width: 50px;
+    height: 50px;
+    margin-right: -1.5rem;
+    margin-top: -1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.corner-curl img {
+    width: 60px;
+    /* Slightly larger than container to ensure high res / overlap */
+    height: 60px;
+    object-fit: contain;
+}
+
+
+.logo-container img {
+    height: 40px;
+}
+
+.rating-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    font-size: 1.3rem;
+    /* Larger font size as per reference */
+    font-family: 'Caveat', cursive;
+    color: var(--text-dark);
+}
+
+.google-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.hero-section {
+    text-align: center;
+    padding: 2rem 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.main-title {
+    font-family: 'Caveat', cursive;
+    font-size: 36px;
+    line-height: 35px;
+    font-weight: 400;
+    width: 346px;
+    height: 70px;
+    margin: 0 auto 1.5rem auto;
+    text-align: center;
+    overflow: visible;
+}
+
+.script-text {
+    font-family: 'Caveat', cursive;
+    color: var(--orange-accent);
+    display: block;
+    font-size: 36px;
+    margin-top: 0.5rem;
+    position: relative;
+    font-weight: 400;
+}
+
+.script-text::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 20px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 20"><path d="M10 15 Q100 0 190 15" stroke="%23f36d21" stroke-width="2" fill="none" stroke-linecap="round"/></svg>') no-repeat center;
+    /* Orange underline to match accent color */
+}
+
+.description {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 2.5rem 0;
+}
+
+.carousel-container {
+    position: relative;
+    margin: 0rem auto;
+    max-width: 90%;
+}
+
+.portfolio-image {
+    width: 300px;
+    height: 168.68px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+}
+
+.carousel-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    width: 250px;
+    margin: 0 auto;
+}
+
+.nav-arrow {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+}
+
+.nav-arrow img {
+    width: 12px;
+    /* Smaller, sharper size for the vector icon */
+    height: 20px;
+    object-fit: contain;
+    opacity: 0.8;
+    transition: all 0.2s ease;
+}
+
+.nav-arrow:hover img {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.nav-arrow.prev img {
+    transform: rotate(0deg);
+    /* Vector icon is already left-pointing based on the path */
+}
+
+.nav-arrow.next img {
+    transform: rotate(180deg);
+    /* Flip for right arrow */
+}
+
+.carousel-footer {
+    font-family: 'Caveat', cursive;
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    font-weight: 400;
+}
+
+.audit-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 261px;
+    height: 48px;
+    margin: 2.5rem auto;
+    background: var(--green-primary);
+    color: white;
+    border: 0.3px solid var(--green-primary);
+    border-radius: 24.5px;
+    font-size: 1rem;
+    font-weight: 400;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(92, 179, 56, 0.2);
+    transition: all 0.3s ease;
+    text-transform: lowercase;
+    opacity: 1;
+}
+
+.audit-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(92, 179, 56, 0.3);
+    background: #4ba01d;
+    color: white;
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    width: 300px;
+    max-width: 300px;
+    margin: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.bottom-nav.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.nav-item.active {
+    color: var(--text-muted);
+}
+
+.nav-icon {
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+}
+
+.nav-icon img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.nav-item.active .nav-icon img,
+.nav-item:hover .nav-icon img {
+    /* Keep icons in their natural grey color */
+    filter: none;
+}
+
+.whatsapp-float {
+    background: var(--green-primary);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.8rem;
+    box-shadow: 0 5px 15px rgba(92, 179, 56, 0.3);
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(92, 179, 56, 0.4);
+}
+
+/* ===== RESPONSIVE DESIGN - MOBILE FIRST ===== */
+
+/* Extra Small Devices (320px - 374px) */
+@media (max-width: 374px) {
+    .ref-header {
+        padding: 0.75rem 1rem;
+    }
+
+    .logo-container img {
+        height: 32px;
+    }
+
+    .rating-container {
+        font-size: 1rem;
+    }
+
+    .google-icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    .corner-curl {
+        width: 40px;
+        height: 40px;
+        margin-right: -1rem;
+    }
+
+    .corner-curl img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .hero-section {
+        padding: 1.5rem 0.75rem;
+    }
+
+    .main-title {
+        font-size: 28px;
+        line-height: 30px;
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+    }
+
+    .script-text {
+        font-size: 28px;
+        margin-top: 0.25rem;
+    }
+
+    .script-text::after {
+        width: 150px;
+        bottom: -10px;
+    }
+
+    .description {
+        font-size: 0.95rem;
+        margin: 1.5rem 0;
+        padding: 0 0.5rem;
+    }
+
+    .carousel-container {
+        max-width: 95%;
+    }
+
+    .portfolio-image {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+        aspect-ratio: 300 / 168.68;
+    }
+
+    .carousel-nav {
+        padding: 0.5rem 0.20rem;
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .nav-arrow img {
+        width: 10px;
+        height: 16px;
+    }
+
+    .carousel-footer {
+        font-size: 1rem;
+    }
+
+    .audit-button {
+        width: 90%;
+        max-width: 240px;
+        height: 44px;
+        font-size: 0.9rem;
+        margin: 2rem auto;
+        border-radius: 22px;
+    }
+
+    .bottom-nav {
+        width: 100%;
+        max-width: 280px;
+        padding: 0.6rem 1rem;
+        border-radius: 35px;
+    }
+
+    .nav-item {
+        font-size: 0.65rem;
+        gap: 2px;
+    }
+
+    .nav-icon {
+        font-size: 1.2rem;
+        width: 20px;
+        height: 20px;
+    }
+
+    .nav-icon img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .whatsapp-float {
+        width: 44px;
+        height: 44px;
+        font-size: 1.5rem;
+    }
+}
+
+/* Small Devices (375px - 480px) - iPhone SE, iPhone 12 mini */
+@media (min-width: 375px) and (max-width: 480px) {
+    .ref-header {
+        padding: 0.875rem 1.25rem;
+    }
+
+    .logo-container img {
+        height: 36px;
+    }
+
+    .rating-container {
+        font-size: 1.15rem;
+    }
+
+    .google-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    .main-title {
+        font-size: 32px;
+        line-height: 32px;
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+    }
+
+    .script-text {
+        font-size: 32px;
+    }
+
+    .script-text::after {
+        width: 170px;
+        bottom: -12px;
+    }
+
+    .description {
+        padding-top: 10px;
+        font-size: 1rem;
+        margin: 2rem 0;
+    }
+
+    .carousel-nav {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .portfolio-image {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        aspect-ratio: 300 / 168.68;
+    }
+
+    .audit-button {
+        width: 85%;
+        max-width: 250px;
+        height: 46px;
+        font-size: 0.95rem;
+        border-radius: 23px;
+    }
+
+    .bottom-nav {
+        width: 100%;
+        max-width: 300px;
+        padding: 0.7rem 1.25rem;
+    }
+
+    .nav-item {
+        font-size: 0.7rem;
+    }
+
+    .whatsapp-float {
+        width: 46px;
+        height: 46px;
+        font-size: 1.6rem;
+    }
+}
+
+/* Medium Devices (481px - 767px) - Larger phones, small tablets */
+@media (min-width: 481px) and (max-width: 767px) {
+    .ref-header {
+        padding: 1rem 1.5rem;
+    }
+
+    .logo-container img {
+        height: 38px;
+    }
+
+    .rating-container {
+        font-size: 1.25rem;
+    }
+
+    .main-title {
+        font-size: 34px;
+        line-height: 34px;
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+
+    .script-text {
+        font-size: 34px;
+    }
+
+    .script-text::after {
+        width: 190px;
+    }
+
+    .description {
+        font-size: 1.05rem;
+        max-width: 500px;
+        margin: 2.25rem auto;
+    }
+
+    .carousel-nav {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .portfolio-image {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        aspect-ratio: 300 / 168.68;
+    }
+
+    .audit-button {
+        width: 280px;
+        height: 48px;
+        font-size: 1rem;
+    }
+
+    .bottom-nav {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+/* Tablets (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .hero-section {
+        max-width: 700px;
+        padding: 2.5rem 2rem;
+    }
+
+    .main-title {
+        font-size: 38px;
+        line-height: 36px;
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+    }
+
+    .script-text {
+        font-size: 38px;
+    }
+
+    .description {
+        font-size: 1.15rem;
+        max-width: 600px;
+    }
+
+    .carousel-nav {
+        width: 100%;
+        max-width: 380px;
+    }
+
+    .portfolio-image {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        aspect-ratio: 300 / 168.68;
+    }
+
+    .carousel-container {
+        max-width: 85%;
+    }
+
+    .bottom-nav {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+/* Landscape Mode Adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero-section {
+        padding: 1rem;
+    }
+
+    .main-title {
+        font-size: 24px;
+        line-height: 26px;
+        margin-bottom: 1rem;
+    }
+
+    .script-text {
+        font-size: 24px;
+    }
+
+    .description {
+        font-size: 0.9rem;
+        margin: 1rem 0;
+    }
+
+    .audit-button {
+        margin: 1.5rem auto;
+        height: 42px;
+    }
+
+    .bottom-nav {
+        padding: 0.5rem 1rem;
+        margin-top: 15px;
+    }
+}
+
+/* Touch-friendly adjustments for all mobile devices */
+@media (hover: none) and (pointer: coarse) {
+
+    .nav-arrow,
+    .nav-item,
+    .audit-button {
+        min-height: 44px;
+        /* Apple's recommended minimum touch target */
+    }
+
+    .nav-arrow {
+        padding: 10px;
+    }
+}

@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import RefLayout from './components/RefLayout';
+import DidYouKnow from './components/DidYouKnow';
+import TailoredCMS from './components/TailoredCMS';
+import EcommerceSection from './components/EcommerceSection';
+import FAQTestimonials from './components/FAQTestimonials';
+import FinalCTA from './components/FinalCTA';
+import Component2 from './components/Component2';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <RefLayout />
+      <Component2 />
+      <DidYouKnow />
+      <TailoredCMS />
+      <EcommerceSection />
+      <FAQTestimonials />
+      <FinalCTA />
     </div>
   );
 }
 
 export default App;
+
+

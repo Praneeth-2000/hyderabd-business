@@ -1,0 +1,95 @@
+.did-you-know-section {
+    padding: 1px 1rem 2rem 1rem;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.did-you-know-container {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dyk-header {
+    margin-bottom: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.dyk-graphic {
+    width: 250px;
+    height: auto;
+    object-fit: contain;
+}
+
+.dyk-info-box {
+    border: 2px solid #5cb338;
+    border-radius: 40px;
+    padding: 2.5rem 2rem 4.5rem 2rem;
+    position: relative;
+    width: 90%;
+    background: white;
+}
+
+.dyk-content {
+    text-align: center;
+}
+
+.dyk-content p {
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+    color: #2d2d2d;
+    line-height: 1.2;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+}
+
+.dyk-audit-button {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #5cb338;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    width: 85%;
+    white-space: nowrap;
+    box-shadow: 0 4px 10px rgba(92, 179, 56, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dyk-audit-button:hover {
+    background: #4ba01d;
+    transform: translateX(-50%) scale(1.02);
+    box-shadow: 0 6px 15px rgba(92, 179, 56, 0.4);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 374px) {
+    .dyk-graphic {
+        width: 200px;
+    }
+
+    .dyk-info-box {
+        padding: 2rem 1.5rem 4rem 1.5rem;
+    }
+
+    .dyk-content p {
+        font-size: 17px;
+    }
+
+    .dyk-audit-button {
+        font-size: 14px;
+        padding: 0.8rem 1.5rem;
+    }
+}

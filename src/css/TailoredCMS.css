@@ -1,0 +1,145 @@
+.tailored-cms-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Tailored Section */
+.tailored-for-brand {
+    background-color: #fafff5;
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+.tailored-title {
+    font-family: 'Caveat', cursive;
+    font-size: 36px;
+    color: #2d2d2d;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.tailored-description {
+    max-width: 500px;
+    margin: 0 auto 2.5rem auto;
+}
+
+.tailored-description p {
+    font-family: 'Mulish', sans-serif;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.tailored-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.tailored-box {
+    background: white;
+    border: 1.5px solid #5cb338;
+    border-radius: 12px;
+    padding: 1.2rem 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+.tailored-box p {
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+    color: #2d2d2d;
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* CMS Section */
+.powerful-cms-section {
+    background-color: #ffffff;
+    padding: 3rem 1.5rem;
+    text-align: center;
+    position: relative;
+}
+
+.cms-title {
+    font-family: 'Caveat', cursive;
+    font-size: 32px;
+    color: #2d2d2d;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.1;
+}
+
+.cms-description {
+    max-width: 500px;
+    margin: 0 auto 3rem auto;
+}
+
+.cms-description p {
+    font-family: 'Mulish', sans-serif;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.4;
+}
+
+.cms-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 1rem;
+}
+
+.cms-nav-arrow {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cms-nav-arrow img {
+    width: 12px;
+    height: 20px;
+}
+
+.cms-nav-arrow.next img {
+    transform: rotate(180deg);
+}
+
+.cms-logo-container {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wordpress-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 374px) {
+    .tailored-title {
+        font-size: 30px;
+    }
+
+    .tailored-box p {
+        font-size: 18px;
+    }
+
+    .cms-title {
+        font-size: 28px;
+    }
+}

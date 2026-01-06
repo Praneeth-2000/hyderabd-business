@@ -1,0 +1,153 @@
+.ecommerce-section {
+    width: 100%;
+    padding: 2rem 0;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.section-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 1.5rem 0;
+}
+
+.platform-info {
+    padding: 1rem 0;
+}
+
+.platform-title {
+    font-family: 'Caveat', cursive;
+    font-size: 32px;
+    color: #2d2d2d;
+    margin: 0;
+    font-weight: 600;
+}
+
+.platform-subtitle {
+    font-family: 'Mulish', sans-serif;
+    font-size: 16px;
+    color: #333;
+    margin: 0.5rem 0 1.5rem 0;
+}
+
+.ecommerce-hero {
+    padding: 2rem 1.5rem;
+}
+
+.ecommerce-title {
+    font-family: 'Caveat', cursive;
+    font-size: 38px;
+    color: #2d2d2d;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    max-width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ecommerce-description {
+    max-width: 500px;
+    margin: 0 auto 2.5rem auto;
+}
+
+.ecommerce-description p {
+    font-family: 'Mulish', sans-serif;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.4;
+}
+
+.shopify-showcase {
+    padding: 2rem 0;
+}
+
+.shopify-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.shopify-nav .nav-arrow {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.shopify-nav .nav-arrow img {
+    width: 12px;
+    height: 20px;
+}
+
+.shopify-nav .nav-arrow.next img {
+    transform: rotate(180deg);
+}
+
+.shopify-bag {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shopify-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.benefits-section {
+    padding: 2.5rem 1.5rem;
+}
+
+.benefits-title {
+    font-family: 'Caveat', cursive;
+    font-size: 32px;
+    color: #2d2d2d;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.benefits-list {
+    list-style: none;
+    padding: 0;
+    max-width: 320px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.benefits-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1.2rem;
+}
+
+.benefit-icon {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+}
+
+.benefits-list span {
+    font-family: 'Mulish', sans-serif;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.2;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 374px) {
+    .ecommerce-title {
+        font-size: 32px;
+    }
+
+    .platform-title {
+        font-size: 28px;
+    }
+}
