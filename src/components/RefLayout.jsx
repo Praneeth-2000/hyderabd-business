@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import '../css/RefLayout.css';
 import leafLogo from '../assets/leaf-logo.png';
-import portfolioItem from '../assets/portfolio-item.png';
+import portfolioItem1 from '../assets/portfolio-item.png';
+import portfolioItem2 from '../assets/portfolio-item-2.png';
+import portfolioItem3 from '../assets/portfolio-item-3.png';
 import cornerCurl from '../assets/corner-curl.png';
 import navArrow from '../assets/Vector.svg';
 import homeIcon from '../assets/Vector-5.svg';
@@ -9,9 +11,33 @@ import servicesIcon from '../assets/Vector-4.svg';
 import workIcon from '../assets/Vector-3.svg';
 import menuIcon from '../assets/Vector-2.svg';
 
+const portfolioData = [
+    {
+        name: 'ai hr bot',
+        image: portfolioItem1
+    },
+    {
+        name: 'aura finance',
+        image: portfolioItem2
+    },
+    {
+        name: 'silk collection',
+        image: portfolioItem3
+    }
+];
+
 const RefLayout = () => {
     const [isNavVisible, setIsNavVisible] = useState(false);
+    const [currentIndex, setCurrentIndex] = useState(0);
     const scrollTimeoutRef = useRef(null);
+
+    const handleNext = () => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % portfolioData.length);
+    };
+
+    const handlePrev = () => {
+        setCurrentIndex((prevIndex) => (prevIndex - 1 + portfolioData.length) % portfolioData.length);
+    };
 
     useEffect(() => {
         const handleScroll = () => {
@@ -85,13 +111,13 @@ const RefLayout = () => {
                 </p>
 
                 {/* Portfolio Showcase */}
-                <img src={portfolioItem} alt="Portfolio Showcase" className="portfolio-image" />
+                <img src={portfolioData[currentIndex].image} alt={portfolioData[currentIndex].name} className="portfolio-image" />
                 <div className="carousel-nav">
-                    <button className="nav-arrow prev">
+                    <button className="nav-arrow prev" onClick={handlePrev}>
                         <img src={navArrow} alt="Previous" />
                     </button>
-                    <span className="carousel-footer">ai hr bot</span>
-                    <button className="nav-arrow next">
+                    <span className="carousel-footer">{portfolioData[currentIndex].name}</span>
+                    <button className="nav-arrow next" onClick={handleNext}>
                         <img src={navArrow} alt="Next" />
                     </button>
                 </div>

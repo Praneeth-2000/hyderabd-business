@@ -136,10 +136,12 @@
     height: 168.68px;
     display: block;
     margin: 0 auto;
-    box-shadow: none;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
     border: none;
     background: transparent;
+    border-radius: 0px;
 }
+
 
 .carousel-nav {
     display: flex;

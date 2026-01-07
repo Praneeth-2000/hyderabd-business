@@ -1,12 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../css/TailoredCMS.css';
 import navArrow from '../assets/Vector.svg';
 import wordpressLogo from '../assets/wordpress-logo.png';
+import shopifyLogo from '../assets/shopify-logo.png';
+import wixLogo from '../assets/wix-logo.png';
+
+const cmsLogos = [
+    { name: 'WordPress', image: wordpressLogo },
+    { name: 'Shopify', image: shopifyLogo },
+    { name: 'Wix', image: wixLogo }
+];
 
 const TailoredCMS = () => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    const handleNext = () => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % cmsLogos.length);
+    };
+
+    const handlePrev = () => {
+        setCurrentIndex((prevIndex) => (prevIndex - 1 + cmsLogos.length) % cmsLogos.length);
+    };
+
     return (
         <section className="tailored-cms-section">
-            {/* Tailored Section */}
+            {/* ... existing sections ... */}
             <div className="tailored-for-brand">
                 <h2 className="tailored-title">creative website design tailored for your brand</h2>
                 <div className="tailored-description">
@@ -44,15 +62,19 @@ const TailoredCMS = () => {
                 </div>
 
                 <div className="cms-navigation">
-                    <button className="cms-nav-arrow prev">
+                    <button className="cms-nav-arrow prev" onClick={handlePrev}>
                         <img src={navArrow} alt="Previous" />
                     </button>
 
                     <div className="cms-logo-container">
-                        <img src={wordpressLogo} alt="WordPress" className="wordpress-logo-img" />
+                        <img
+                            src={cmsLogos[currentIndex].image}
+                            alt={cmsLogos[currentIndex].name}
+                            className="wordpress-logo-img"
+                        />
                     </div>
 
-                    <button className="cms-nav-arrow next">
+                    <button className="cms-nav-arrow next" onClick={handleNext}>
                         <img src={navArrow} alt="Next" />
                     </button>
                 </div>
